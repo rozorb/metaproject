@@ -1,11 +1,10 @@
 import React from "react"
-import logo from "./assets/Logo.png"
+
 
 export default function Nav() {
     return(
         <nav>
-            <img src={logo} alt="Logo"/>
-            <ul>
+            <ul class="nav-links">
                 <li><a>Home</a></li>
                 <li><a>About</a></li>
                 <li><a>Menu</a></li>
