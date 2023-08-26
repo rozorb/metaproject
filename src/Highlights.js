@@ -10,7 +10,7 @@ export default function Highlights() {
         <div class="high">
          <div class="high-container">
             <div class="high-top">
-              <h2>This weeks specials!</h2>
+              <h2 class="display-title">This weeks specials!</h2>
               <button>Online Menu</button>
             </div>
             <section class="menu-items">
@@ -22,7 +22,7 @@ export default function Highlights() {
                           <h4>Greek Salad</h4>
                           <p>$ 12.99</p>
                         </div>
-                        <p class="card-description">The famous greek salad of crispy lettuce,
+                        <p class="card-description karla-regular">The famous greek salad of crispy lettuce,
                           peppers, olives and our Chicago style feta
                           cheese, garnished with crunchy garlic and
                           rosemary croutons.
@@ -40,7 +40,7 @@ export default function Highlights() {
                           <h4>Bruchetta</h4>
                           <p>$ 5.99</p>
                         </div>
-                        <p class="card-description">Our Bruchetta is made from grilled bread
+                        <p class="card-description karla-regular">Our Bruchetta is made from grilled bread
                           that has been smeared with garlic and
                           seasoned with sald and olive oil.
                         </p>
@@ -57,7 +57,7 @@ export default function Highlights() {
                           <h4>Lemon Dessert</h4>
                           <p>$ 5.00</p>
                         </div>
-                        <p class="card-description">This comes straight from grandma's recipe
+                        <p class="card-description karla-regular">This comes straight from grandma's recipe
                           book, every last ingredient has been sourced
                           and is as authentic as can be imagined.
                         </p>

@@ -4,7 +4,7 @@ import React from "react"
 export default function Nav() {
     return(
         <nav>
-            <ul class="nav-links">
+            <ul class="nav-links karla-regular">
                 <li><a>Home</a></li>
                 <li><a>About</a></li>
                 <li><a>Menu</a></li>

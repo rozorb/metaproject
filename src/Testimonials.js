@@ -7,7 +7,7 @@ import person4 from "./assets/Benjy.png"
 export default function Testimonials() {
     return(
         <div class="test">
-          <h2 id="test-header">Testimonials</h2>
+          <h2 id="test-header" class="display-title">Testimonials</h2>
           <ul class="reviews">
             <li>
               <h4 class="rating">4.8/5</h4>
