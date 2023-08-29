@@ -5,7 +5,7 @@ export default function Hero() {
     return(
         <div class="hero">
           <div class="hero-container">
-            <section>
+            <section class="hero-text">
               <h2 id="hero-heading" class="display-title">Little Lemon</h2>
               <h4 id="hero-subheading" class="sub-title">Chicago</h4>
               <p id="hero-paragraph" class="karla-regular">We are a family owned

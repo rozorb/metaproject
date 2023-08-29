@@ -40,15 +40,14 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
+/* - - - - - - - - - - Navbar - - - - - - - - - */
+nav {
+  margin-top: 3px;
+}
 .h-logo {
   width: 230px;
   height: 70px;
-}
-
-/* - - - - - - - - - - Navbar - - - - - - - - - */
-
-nav {
-  margin-top: 3px;
 }
 .nav-links {
   display: flex;
@@ -62,20 +61,6 @@ nav {
   list-style: none;
   color: #333333;
 }
-
-/* - - - - - - - - - - Main - - - - - - - - - */
-
-main {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 383px 720px 540px 430px;
-  grid-template-areas:
-    "hero"
-    "high"
-    "test"
-    "about";
-  justify-items: center;
-}
 .hero, .high, .test, .about {
   width: 100%;
 }
@@ -83,21 +68,24 @@ main {
 /* - - - - - - - - - -  Hero section - - - - - - - - - - */
 
 .hero {
-  grid-area: hero;
   background: #495E57;
+  height: 383px;
 }
 .hero-container, .about-container {
-  max-width: 850px;
   height: 100%;
+  padding: 0 20px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 850px;
 }
-.hero-container > section {
-  margin-top: auto;
-  max-width: 280px;
-  height: 345px;
+.hero-content {
+  flex: 1;
+  padding: 10px;
+}
+.hero-text {
+  padding-right: 15px;
 }
 #hero-heading {
   margin: 10px 0 0 0;
@@ -110,7 +98,7 @@ main {
 #hero-paragraph {
   color: #EDEFEE;
   margin-bottom: 0;
-  max-width: 250px;
+  max-width: 300px;
 }
 #reserve {
   width: 190px;
@@ -125,23 +113,27 @@ main {
   font-size: 19px;
 }
 #hero-img {
-  width: 330px;
-  height: 435px;
+  position: relative;
+  top: 50px;
+  max-width: 300px; /* Make the image responsive */
+  height: auto;
   border-radius: 16PX;
-  margin-top: 110px;
 }
 
 /*   Highlights section */
 
 .high {
   grid-area: high;
+  height: 720px
 }
 .high-container {
-  max-width: 850px;
+  max-width: 950px;
   height: 520px;
   margin: 85px auto 0 auto;
 }
 .high-top {
+  max-width: 850px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -164,8 +156,8 @@ main {
   font-size: 19px;
 }
 .menu-items {
+  width: 100%;
   display: flex;
-  gap: 20px;
   padding: 0;
   list-style: none;
   justify-content: space-around;
@@ -175,6 +167,7 @@ main {
   height: 460px;
   background: #EDEFEE;
   border-radius: 16px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .menu-img {
   width: 100%;
@@ -212,8 +205,8 @@ main {
 /* - - - - - Testimonials section - - - - - - - - - */
 
 .test {
-  grid-area: test;
   background: #495E57;
+  height: 540px;
 }
 #test-header {
   margin: 35px auto 60px auto;
@@ -277,8 +270,8 @@ main {
 /*  - - - - About section - - - -  */
 
 .about {
-  grid-area: about;
   background: #EE9972;
+  height: 430px;
 }
 .about-text-section {
   margin: auto 0;
@@ -356,3 +349,87 @@ footer img {
   font-size: 16px;
 }
 
+/* ----------------------------------- Media Responsiveness --------------------------- */
+@media (max-width: 875px) {
+  .h-logo {
+    width: 180px;
+    height: 60px;
+    padding: 0 30px;
+  }
+  .nav-links {
+    gap: 17px;
+  }
+  .nav-links > li {
+    /* margin: 0 5px; */
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 740px) {
+  .nav-links {
+    gap: 15px;
+  }
+  .nav-links > li {
+    /* margin: 0 5px; */
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 681px) {
+  .nav-links {
+    display: none;
+  }
+  .h-logo {
+    width: 180px;
+    height: 60px;
+    padding: 0 30px;
+    margin-right: auto;
+  }
+  .hamburger-icon {
+    /* Add your background image or SVG icon here */
+    /* Example using a background image */
+    background-image: url('./assets/hamburger.svg');
+    width: 30px; /* Adjust this based on your icon's size */
+    height: 30px;
+    background-size: cover;
+    cursor: pointer;
+    margin-right: 25px;
+  }
+
+  #hero-heading {
+    font-size: 45px;
+  }
+  #hero-subheading {
+    font-size: 25px;
+  }
+  #hero-paragraph {
+    font-size: 16px;
+  }
+  #reserve {
+    width: 190px;
+    height: 55px;
+    border-radius: 16px;
+    border-style: none;
+    margin-top: 25px;
+    background: #F4CE14;
+    color: #333333;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+  }
+  #hero-img {
+    position: relative;
+    top: 50px;
+    max-width: 300px; /* Make the image responsive */
+    height: auto;
+    border-radius: 16PX;
+  }
+}
+
+@media (max-width: 555px) {
+  #hero-img {
+    top: 0;
+    max-width: 200px; 
+    height: auto;
+  }
+}
