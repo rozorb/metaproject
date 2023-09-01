@@ -122,23 +122,21 @@ nav {
 
 /*   Highlights section */
 
-.high {
-  grid-area: high;
-  height: 720px
-}
 .high-container {
   max-width: 950px;
-  height: 520px;
-  margin: 85px auto 0 auto;
+  margin: 0 auto;
+  padding: 100px 0 50px 0;
 }
 .high-top {
   max-width: 850px;
   margin: 0 auto;
+  padding: 25px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .high-top > h2 {
-  margin: 25px 0;
+  margin: 0;
   font-weight: bold;
 }
 .high-top > button {
@@ -146,7 +144,6 @@ nav {
   height: 55px;
   border-radius: 16px;
   border-style: none;
-  margin-top: 25px;
   margin-right: 10px;
   background: #F4CE14;
   color: #333333;
@@ -163,6 +160,7 @@ nav {
   justify-content: space-around;
 }
 .menu-items > li {
+  position: relative;
   width: 260px;
   height: 460px;
   background: #EDEFEE;
@@ -180,21 +178,33 @@ nav {
   margin: 0 25px;
 }
 .card-title {
+  padding: 25px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.card-title h4 {
+  margin: 0;
+}
 .card-title > p {
+  margin: 0;
   color: #EE9972;
 }
 .card-description {
-  height: 90px;
-  margin-bottom: 27px;
+  max-height: 100px;
+  margin: 0;
+  margin-bottom: auto;
   font-size: 16px;
 }
 .delivery-text {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 23px;
   display: flex;
   align-items: center;
+}
+.delivery-text p {
+  margin: 0;
 }
 .scooter{
   width: 20px;
@@ -209,7 +219,7 @@ nav {
   height: 540px;
 }
 #test-header {
-  margin: 35px auto 60px auto;
+  margin: 0 auto 60px auto;
   text-align: center;
   color: #EDEFEE;
 }
@@ -350,6 +360,7 @@ footer img {
 }
 
 /* ----------------------------------- Media Responsiveness --------------------------- */
+
 @media (max-width: 875px) {
   .h-logo {
     width: 180px;
@@ -360,9 +371,17 @@ footer img {
     gap: 17px;
   }
   .nav-links > li {
-    /* margin: 0 5px; */
     font-size: 17px;
   }
+ .menu-items > li {   /* highlights */
+  width: 230px;
+  height: 430px;
+  }
+  .card-description {
+    height: 60px;
+    font-size: 14px;
+  }
+
 }
 
 @media (max-width: 740px) {
@@ -370,8 +389,20 @@ footer img {
     gap: 15px;
   }
   .nav-links > li {
-    /* margin: 0 5px; */
     font-size: 15px;
+  }
+  .high-top {
+    padding: 17px 0 17px 10px;
+  }
+  .card-title {
+    padding: 11px 0 6px 0;
+  }
+  .menu-items > li {
+    height: 370px;
+    }
+  .card-description {
+    height: 60px;
+    font-size: 13px;
   }
 }
 
@@ -389,7 +420,7 @@ footer img {
     /* Add your background image or SVG icon here */
     /* Example using a background image */
     background-image: url('./assets/hamburger.svg');
-    width: 30px; /* Adjust this based on your icon's size */
+    width: 30px;
     height: 30px;
     background-size: cover;
     cursor: pointer;
@@ -420,16 +451,71 @@ footer img {
   #hero-img {
     position: relative;
     top: 50px;
-    max-width: 300px; /* Make the image responsive */
+    max-width: 300px;
     height: auto;
     border-radius: 16PX;
+  }
+}
+
+@media (max-width: 670px) {
+  .high-top  h2 {
+    font-size: 40px;
+  }
+  .menu-items > li {   /* highlights */
+    width: 180px;
+    height: 340px;
+    }
+  .card-title h4, .card-title p, .delivery-text p {
+    font-size: 14px;
+  }
+  .card-description  {
+    font-size: 12px;
+  }
+  .delivery-text {
+    padding-bottom: 17px;
+  }
+  .scooter{
+    width: 17px;
+    height: 17px;
+    margin-left: 9px;
   }
 }
 
 @media (max-width: 555px) {
   #hero-img {
     top: 0;
-    max-width: 200px; 
+    max-width: 200px;
     height: auto;
   }
+  .high-container {
+    padding: 25px 0;
+  }
+  .high-top  h2 {
+    font-size: 32px;
+  }
+  .high-top > button {
+    width: 160px;
+    height: 45px;
+    font-size: 17px;
+  }
+  .menu-items > li {   /* highlights */
+    width: 140px;
+    height: 270px;
+    }
+  .card-title h4, .card-title p, .delivery-text p {
+    font-size: 9px;
+  }
+  .card-description  {
+    font-size: 8px;
+  }
+  .delivery-text {
+    padding-bottom: 14px;
+  }
+  .scooter{
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
 }
