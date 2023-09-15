@@ -29,7 +29,7 @@ export default function Highlights() {
                         </p>
                         <div class="delivery-text">
                           <p>Order a delivery</p>
-                          <img class="scooter" src={scooter} />
+                          <img class="scooter" src={scooter} alt="scooter" />
                         </div>
                       </div>
                     </li>
@@ -46,7 +46,7 @@ export default function Highlights() {
                         </p>
                         <div class="delivery-text">
                           <p>Order a delivery</p>
-                          <img class="scooter" src={scooter} />
+                          <img class="scooter" src={scooter} alt="scooter" />
                         </div>
                       </div>
                     </li>
@@ -63,7 +63,7 @@ export default function Highlights() {
                         </p>
                         <div class="delivery-text">
                           <p>Order a delivery</p>
-                          <img class="scooter" src={scooter} />
+                          <img class="scooter" src={scooter} alt="scooter"/>
                         </div>
                       </div>
                     </li>

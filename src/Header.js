@@ -4,11 +4,10 @@ import logo from "./assets/lemon.png"
 
 export default function Header () {
     return (
-        <header class="header">
-          <img class="h-logo" src={logo} alt="Logo"/>
-          <div class="navbar-toggle" id="navbarToggle">
-            <div class="hamburger-icon">
-
+        <header className="header">
+          <img className="h-logo" src={logo} alt="Logo"/>
+          <div className="navbar-toggle" id="navbarToggle">
+            <div className="hamburger-icon">
             </div>
           </div>
           <Nav />
