@@ -4,12 +4,14 @@ import React from 'react'
 export default function BookingPage({times, formData, handleChange}) {
   console.log(`This is the booking page props: ${JSON.stringify(formData)}`)
     return(
-        <>
-          <BookingForm
-            times={times}
-            handleChange={handleChange}
-            formData={formData}
-          />
-        </>
+      <div className="page-container">
+        <div className="booking-content">
+        <BookingForm
+          times={times}
+          handleChange={handleChange}
+          formData={formData}
+        />
+        </div>
+      </div>
     )
 }

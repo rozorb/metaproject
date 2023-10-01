@@ -24,21 +24,14 @@ export default function BookingForm({times, formData, handleChange}) {
   }
   console.log('These are the times: ', times.value)
     return(
-    <>
-      <h1>Book Now</h1>
+    <div className="booking-div karla-regular">
+      <h1 className="page-title">Reserve Your Table</h1>
       <form
-        className="bookingForm"
+        className="booking-form"
         onSubmit={handleSubmit}
-        style={{
-          display: 'grid',
-          maxWidth: '200px',
-          minHeight: '60vh',
-          gap: '20px',
-          background: 'pink'
-        }}
       >
-        <div>
-          <label htmlFor="res-date">Choose date</label>
+        <div id="form-text-spacing">
+          <label htmlFor="res-date" className="form-text">Choose a date: </label>
           <input
               type="date"
               id="res-date"
@@ -48,26 +41,26 @@ export default function BookingForm({times, formData, handleChange}) {
               required
           />
         </div>
-        <div>
-          <label htmlFor="res-time" >Choose time</label>
+        <div >
+          <label htmlFor="res-time" className="form-text">Choose a time: </label>
           <select
               id="res-time"
               name="formTime"
               onChange={handleChange}
               required
           >
-            <option value="">Select a time</option>
+            <option value=""></option>
             {times.value ? (
               times.value.map((time) => (
                   <option key={time}>{time}</option>
               ))
               ) : (
-                <option>Times are not available</option>
+                <option>date needed</option>
             )}
           </select>
         </div>
-        <div>
-          <label htmlFor="guests">Number of guests</label>
+        <div >
+          <label htmlFor="guests" className="form-text">Number of guests: </label>
           <input
               type="number"
               placeholder="1"
@@ -78,8 +71,8 @@ export default function BookingForm({times, formData, handleChange}) {
               onChange={handleChange}
           />
         </div>
-        <div>
-          <label htmlFor="occasion">Occasion</label>
+        <div >
+          <label htmlFor="occasion" className="form-text">Occasion: </label>
           <select
               id="occasion"
               name="occasion"
@@ -91,14 +84,14 @@ export default function BookingForm({times, formData, handleChange}) {
             <option>Anniversary</option>
           </select>
         </div>
-        <div>
-          <input className="bookingButton" type="submit" value="Make Your reservation" />
+        <div >
+          <input className="bookingButton" type="submit" value="Submit" id="form-button"/>
         </div>
       </form>
       {formData.formDate}
       {formData.formTime}
       {formData.guestsNumber}
       {formData.occasion}
-    </>
+    </div>
   )
 }
