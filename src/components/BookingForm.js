@@ -1,35 +1,31 @@
-import { useState } from 'react'
+import { submitAPI } from "../mockAPI"
+import { useNavigate } from 'react-router-dom';
+import React from 'react'
 
-
-export default function BookingForm() {
-  const [formData, setFormData] = useState({
-      formDate:'', formTime:'', guestsNumber:'1', occasion:''}
-  )
-
-  const [availableTimes, setAvailableTime] = useState(
-      ["17:00","18:00","19:00","20:00","21:00","22:00", "23:00"]
-  )
-
-  console.log(formData)
-
-  function handleChange(e) {
-    setFormData(prevFormData => {
-      return {
-        ...prevFormData,
-        [e.target.name]: e.target.value
-      }
-    })
-  }
-
+export default function BookingForm({times, formData, handleChange}) {
+  const navigate = useNavigate()
   function handleSubmit(e) {
     e.preventDefault()
-    const reserve = {formData}
+    const reserve = submitAPI(formData)
+    reserve
+      .then((result) => {
+        // Handle the successful form submission
+        console.log('Form submitted successfully', result);
+        localStorage.setItem('reserveData', JSON.stringify(formData))
+        const reserveData = JSON.parse(localStorage.getItem('reserveData'))
+        console.log(reserveData)
+        navigate('/confirmed-booking')
+      })
+      .catch((error) => {
+        console.error('Form submission failed', error);
+      });
     console.log(reserve)
     alert('Form submitted successfully!');
   }
-
+  console.log('These are the times: ', times.value)
     return(
     <>
+      <h1>Book Now</h1>
       <form
         className="bookingForm"
         onSubmit={handleSubmit}
@@ -47,6 +43,7 @@ export default function BookingForm() {
               type="date"
               id="res-date"
               name="formDate"
+              value={formData.formDate}
               onChange={handleChange}
               required
           />
@@ -60,11 +57,13 @@ export default function BookingForm() {
               required
           >
             <option value="">Select a time</option>
-            {availableTimes.map(time => {
-              return (
-                <option>{time}</option>
-              )
-            })}
+            {times.value ? (
+              times.value.map((time) => (
+                  <option key={time}>{time}</option>
+              ))
+              ) : (
+                <option>Times are not available</option>
+            )}
           </select>
         </div>
         <div>
@@ -75,6 +74,7 @@ export default function BookingForm() {
               min="1" max="10"
               id="guests"
               name="guestsNumber"
+              value={formData.guestsNumber}
               onChange={handleChange}
           />
         </div>
@@ -83,6 +83,7 @@ export default function BookingForm() {
           <select
               id="occasion"
               name="occasion"
+              value={formData.occasion}
               onChange={handleChange}
           >
             <option></option>

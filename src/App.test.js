@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom';
+import BookingForm from './components/BookingForm';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+test('Renders the BookingForm heading', () => {
+    <Router>
+      render(<BookingForm />);
+    </Router>
+    console.log(screen.debug());
+    const headingElement = screen.getByText("Book Now");
+    expect(headingElement).toBeInTheDocument();
+})

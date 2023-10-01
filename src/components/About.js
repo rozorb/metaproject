@@ -1,6 +1,6 @@
 import React from "react"
-import bros1 from "./assets/Mario and Adrian A.jpg"
-import bros2 from "./assets/Mario and Adrian b.jpg"
+import bros1 from "../assets/Mario and Adrian A.jpg"
+import bros2 from "../assets/Mario and Adrian b.jpg"
 
 export default function About() {
     return(

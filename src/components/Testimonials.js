@@ -1,8 +1,8 @@
 import React from "react"
-import person1 from "./assets/carla.png"
-import person2 from "./assets/steve.png"
-import person3 from "./assets/kaya.png"
-import person4 from "./assets/Benjy.png"
+import person1 from "../assets/carla.png"
+import person2 from "../assets/steve.png"
+import person3 from "../assets/kaya.png"
+import person4 from "../assets/Benjy.png"
 
 export default function Testimonials() {
     return(
