@@ -9,7 +9,6 @@ export default function BookingForm({times, formData, handleChange}) {
     const reserve = submitAPI(formData)
     reserve
       .then((result) => {
-        // Handle the successful form submission
         console.log('Form submitted successfully', result);
         localStorage.setItem('reserveData', JSON.stringify(formData))
         const reserveData = JSON.parse(localStorage.getItem('reserveData'))
@@ -22,7 +21,7 @@ export default function BookingForm({times, formData, handleChange}) {
     console.log(reserve)
     alert('Form submitted successfully!');
   }
-  console.log('These are the times: ', times.value)
+  //console.log('These are the times: ', times.value)
     return(
     <div className="booking-div karla-regular">
       <h1 className="page-title">Reserve Your Table</h1>
@@ -39,6 +38,7 @@ export default function BookingForm({times, formData, handleChange}) {
               value={formData.formDate}
               onChange={handleChange}
               required
+              data-testid="date-input"
           />
         </div>
         <div >
@@ -49,7 +49,7 @@ export default function BookingForm({times, formData, handleChange}) {
               onChange={handleChange}
               required
           >
-            <option value=""></option>
+            <option value="">Select a time</option>
             {times.value ? (
               times.value.map((time) => (
                   <option key={time}>{time}</option>
@@ -88,10 +88,7 @@ export default function BookingForm({times, formData, handleChange}) {
           <input className="bookingButton" type="submit" value="Submit" id="form-button"/>
         </div>
       </form>
-      {formData.formDate}
-      {formData.formTime}
-      {formData.guestsNumber}
-      {formData.occasion}
+  
     </div>
   )
 }

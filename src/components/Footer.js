@@ -4,8 +4,9 @@ import logo from "../assets/lemon-logo-vert.png"
 export default function Footer() {
     return(
         <footer className="footer">
+          <div className="footer-container">
             <img src={logo} alt="footer logo"/>
-            <div className="footer-container">
+            <div className="footer-links-container">
               <h4 className="karla-regular">Door Navigation</h4>
               <ul className="center-links karla-regular">
                 <li>Home</li>
@@ -16,7 +17,7 @@ export default function Footer() {
                 <li>Login</li>
               </ul>
             </div>
-            <div className="footer-container">
+            <div className="footer-links-container">
               <h4 className="karla-regular">Contact</h4>
               <ul className="center-links karla-regular">
                 <li>1238 Maple Street, Chicago IL 60601</li>
@@ -24,7 +25,7 @@ export default function Footer() {
                 <li>contact@littlelemon.com</li>
               </ul>
             </div>
-            <div className="footer-container">
+            <div className="footer-links-container">
               <h4 className="karla-regular">Social Media Links</h4>
               <ul className="center-links karla-regular">
                 <li>Twitter</li>
@@ -32,6 +33,7 @@ export default function Footer() {
                 <li>Instagram</li>
               </ul>
             </div>
+          </div>
         </footer>
     )
 }

@@ -14,7 +14,7 @@ function getCurrentDate() {
 
   const year = currentDate.getFullYear()
   const month = (currentDate.getMonth() + 1).toString().padStart(2, '0')
-  const day = currentDate.getDate()
+  const day = (currentDate.getDate() + 1).toString().padStart(2, '0')
 
   const formattedDate = `${year}-${month}-${day}`;
   console.log("This is the formattedDate ", formattedDate)

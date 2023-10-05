@@ -16,7 +16,7 @@ export default function Highlights() {
             <section className="menu-items">
                 <ul className="menu-items">
                     <li>
-                      <img src={salad} class="menu-img" alt="salad" />
+                      <img src={salad} className="menu-img" alt="salad" />
                       <div className="card-text">
                         <div className="card-title">
                           <h4>Greek Salad</h4>
@@ -34,7 +34,7 @@ export default function Highlights() {
                       </div>
                     </li>
                     <li>
-                      <img src={bruchetta} class="menu-img" alt="bruchetta" />
+                      <img src={bruchetta} className="menu-img" alt="bruchetta" />
                       <div className="card-text">
                         <div className="card-title">
                           <h4>Bruchetta</h4>
@@ -51,7 +51,7 @@ export default function Highlights() {
                       </div>
                     </li>
                     <li>
-                      <img src={dessert} class="menu-img" alt="dessert" />
+                      <img src={dessert} className="menu-img" alt="dessert" />
                       <div className="card-text">
                         <div className="card-title">
                           <h4>Lemon Dessert</h4>
