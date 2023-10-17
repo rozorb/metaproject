@@ -46,6 +46,10 @@ header {
   align-items: center;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 /* - - - - - - - - - - Navbar - - - - - - - - - */
 nav {
   margin-top: 3px;
@@ -170,7 +174,14 @@ a:visited, a:link, a:active {
   font-style: normal;
   font-weight: bold;
   font-size: 19px;
+  transition: color 0.7s;
 }
+
+.high-top > button:hover {
+  color: #FFFFFF;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+}
+
 .menu-items {
   width: 100%;
   display: flex;
@@ -437,10 +448,28 @@ footer img {
   font-size: 37px;
   padding-top: 80px;
 }
+.confirmed-page > p:nth-child(2) {
+  margin: 10 auto 60px auto;
+  width: 300px;
+}
 .confirmed-page > p:nth-child(3) {
   font-weight: bold;
 }
 
+/*   ---------------------------------- Temp Page ---------------------------------- */
+.temp-page {
+  height: 60vh;
+  text-align: center;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.temp-page h1 {
+  background-color: #EE9972;
+  padding: 15px 35px;
+  border-radius: 1%;
+}
 /* ----------------------------------- Media Responsiveness --------------------------- */
 
 @media (max-width: 875px) {
@@ -564,20 +593,72 @@ footer img {
   .h-logo {
     width: 180px;
     height: 60px;
-    padding: 0 30px;
+    margin-left: 30px;
+    padding: 5px 20px;
+    border-radius: 2%;
     margin-right: auto;
+    position: relative;
+    z-index: 3;
+    background-color: #FFFFFF;
   }
   .hamburger-icon {
-    /* Add your background image or SVG icon here */
-    /* Example using a background image */
-    background-image: url('./assets/hamburger.svg');
-    width: 30px;
-    height: 30px;
-    background-size: cover;
-    cursor: pointer;
+    height: 3em;
+    width: 3em;
     margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
   }
 
+  .burgerBar {
+    width: 3em;
+    height: .5em;
+    background-color: #333333;
+    border-radius: 0.5em;
+    transition: 0.5s;
+  }
+  .menu {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: #FBDABB;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+    transition: ease-out 0.9s;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .hamburger-menu {
+    margin: 93px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 80%;
+    align-items: center;
+    justify-content: space-around;
+    color: #F4CE14;
+  }
+  /*                animation              */
+  .burgerBar.clicked:nth-child(1) {
+   transform: rotate(90deg) translate(1.4em, -1.3em);
+   transition: ease-out 0.6s;
+  }
+  .burgerBar.clicked:nth-child(2) {
+    transform: rotate(90deg) translate(0.15em, 0);
+    transition: ease-out 0.6s;
+   }
+   .burgerBar.clicked:nth-child(3) {
+    transform: rotate(90deg) translate(-1.1em, 1.3em);
+    transition: ease-out 0.6s;
+   }
   #hero-heading {
     font-size: 45px;
   }

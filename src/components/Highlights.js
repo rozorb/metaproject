@@ -3,6 +3,7 @@ import salad from "../assets/greek salad.jpg"
 import bruchetta from "../assets/bruchetta.png"
 import dessert from "../assets/lemon dessert.jpg"
 import scooter from "../assets/scooter.png"
+import { Link } from "react-router-dom"
 
 
 export default function Highlights() {
@@ -11,7 +12,9 @@ export default function Highlights() {
          <div className="high-container">
             <div className="high-top">
               <h2 className="display-title">This weeks specials!</h2>
-              <button>Online Menu</button>
+              <button >
+                <Link to='/menu-page'>Online Menu</Link>
+              </button>
             </div>
             <section className="menu-items">
                 <ul className="menu-items">

@@ -19,7 +19,6 @@ export default function BookingForm({times, formData, handleChange}) {
         console.error('Form submission failed', error);
       });
     console.log(reserve)
-    alert('Form submitted successfully!');
   }
   //console.log('These are the times: ', times.value)
     return(
@@ -58,6 +57,28 @@ export default function BookingForm({times, formData, handleChange}) {
                 <option>date needed</option>
             )}
           </select>
+        </div>
+        <div>
+          <label htmlFor="name" className="form-text">Name: </label>
+          <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+          />
+        </div>
+        <div>
+          <label htmlFor="phone" className="form-text">Phone: </label>
+          <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+          />
         </div>
         <div >
           <label htmlFor="guests" className="form-text">Number of guests: </label>

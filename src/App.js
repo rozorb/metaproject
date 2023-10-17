@@ -4,6 +4,8 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import BookingPage from './pages/BookingPage.js'
 import ConfirmedBooking from './pages/ConfirmedBooking'
+import Temp from './pages/Temp'
+import Menu from './pages/Menu'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import React, { useState, useReducer, useEffect } from 'react'
 import { fetchAPI } from "./mockAPI"
@@ -43,7 +45,7 @@ function updateTimes(state, date) {
 function App() {
   const [initialize, setInitialize] = useState(false) //state condition to set initial value for current date
   const [formData, setFormData] = useState({
-    formDate:'', formTime:'', guestsNumber:'1', occasion:''}
+    formDate:'', formTime:'', guestsNumber:'1', occasion:'', name:'', phone:''}
   )
   const [state, dispatch] = useReducer(updateTimes, ["17:00","18:00","19:00"])  // state for reserve times based on date
 
@@ -99,8 +101,14 @@ function App() {
                 formData={formData}
               />
             }/>
+            <Route path='/menu-page' element={
+              <Menu />
+            }/>
             <Route path='/confirmed-booking' element={
               <ConfirmedBooking />
+            }/>
+            <Route path='/temp' element={
+              <Temp />
             }/>
           </Routes>
         </div>
