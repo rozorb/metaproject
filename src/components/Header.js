@@ -34,14 +34,14 @@ export default function Header () {
                   <Link to='/'>Home</Link>
                 </div>
                 <div className="display-title" onClick={handleClick}>
-                <Link to='/temp'>Menu</Link>
+                <Link to='/menu-page'>Menu</Link>
                 </div>
                 <div className="display-title" onClick={handleClick}>
                   <Link to='/booking-page'>Reservations</Link>
                 </div>
-                <div className="display-title" onClick={handleClick}>
+                {/* <div className="display-title" onClick={handleClick}>
                   <Link to='/temp'>Order Online</Link>
-                </div>
+                </div> */}
               </div>
             </div>
           <Nav />

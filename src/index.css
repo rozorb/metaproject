@@ -407,7 +407,7 @@ footer img {
   margin: 12px auto;
   border-radius: 5%;
   max-width: 400px;
-  min-height: 50vh;
+  min-height: 67vh;
 }
 .form-text {
   padding-right: 5px;
@@ -426,6 +426,11 @@ footer img {
   font-family: 'Karla', sans-serif;
   font-weight: bold;
   font-size: 19px;
+  transition: color 0.7s;
+}
+#form-button:hover {
+  color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 /*------------------------------------ Booking Confirmed page -------------------------- */
 .confirmed-background {
@@ -436,20 +441,22 @@ footer img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
     background: #FBDABB;
     color: #333333;
     font-size: 20px;
     margin: 12px auto;
     border-radius: 5%;
     max-width: 400px;
-    min-height: 58vh;
+    min-height: 74vh;
 }
 #confirmed-heading {
   font-size: 37px;
-  padding-top: 80px;
+  padding-top: 180px;
 }
 .confirmed-page > p:nth-child(2) {
-  margin: 10 auto 60px auto;
+  margin: 10 auto 20px auto;
   width: 300px;
 }
 .confirmed-page > p:nth-child(3) {

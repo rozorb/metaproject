@@ -14,7 +14,9 @@ export default function ConfirmedBooking() {
     <div className='confirmed-background'>
       <div className='confirmed-page'>
         <h2 id='confirmed-heading'>Booking Confirmed</h2>
-        <p>Thank you <span>{getName}</span>, we look forward to seeing you on:</p>
+        <p>Thank you <span>{getName}</span>, we look forward to seeing you on:
+        
+        </p>
         <p>{savedBooking !== '' ? savedBooking : 'did not display'}</p>
       </div>
     </div>
